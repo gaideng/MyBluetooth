@@ -11,6 +11,7 @@ import com.inuker.bluetooth.library.connect.listener.BluetoothStateListener;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnStart;
     private Button btnStop;
+    private Button btnTuYa;
     private BluetoothClient mClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
+        btnStop = findViewById(R.id.btnTuYa);
         btnStart.setOnClickListener(this);
         btnStop.setOnClickListener(this);
         mClient = new BluetoothClient(this);
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == btnStop){
             mClient.stopSearch();
             mClient.closeBluetooth();
+        }
+        if (view == btnTuYa){
         }
     }
 
