@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (view == btnTuYa){
             startActivity(new Intent(this, TuYaActivity.class));
+
         }
         if (view == btnBle){
             startActivity(new Intent(this, BluetoothActivity.class));
