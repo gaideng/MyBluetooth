@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == btnBle){
             startActivity(new Intent(this, BluetoothActivity.class));
         }
+        if (view == btnStop){
+
+        }
     }
 
     @Override
