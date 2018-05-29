@@ -30,6 +30,8 @@
             android:label="@string/title_activity_bluetooth"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".tuya.TuYaActivity">
+        </activity>
     </application>
 
 </manifest>

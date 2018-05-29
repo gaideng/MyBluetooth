@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.growatt.mybluetooth.bluetooth.activity.BluetoothActivity;
+import com.growatt.mybluetooth.tuya.TuYaActivity;
 import com.inuker.bluetooth.library.BluetoothClient;
 import com.inuker.bluetooth.library.connect.listener.BluetoothStateListener;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnStart;
     private Button btnStop;
     private Button btnBle;
+    private Button btnTuYa;
     private BluetoothClient mClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
         btnBle = findViewById(R.id.btnStop);
+        btnTuYa = findViewById(R.id.btnTuYa);
         btnStart.setOnClickListener(this);
         btnStop.setOnClickListener(this);
         btnBle.setOnClickListener(this);
+        btnTuYa.setOnClickListener(this);
         mClient = new BluetoothClient(this);
         //蓝牙状态监听
         mClient.registerBluetoothStateListener(mBluetoothStateListener);
@@ -50,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == btnStop){
             mClient.stopSearch();
             mClient.closeBluetooth();
+        }
+        if (view == btnTuYa){
+            startActivity(new Intent(this, TuYaActivity.class));
         }
         if (view == btnBle){
             startActivity(new Intent(this, BluetoothActivity.class));

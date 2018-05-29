@@ -25,6 +25,12 @@
         android:layout_height="40dp"
         android:text="跳转到Ble"
         />
+    <Button
+        android:id="@+id/btnTuYa"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="涂鸦"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
