@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mClient = new BluetoothClient(this);
         //蓝牙状态监听
         mClient.registerBluetoothStateListener(mBluetoothStateListener);
+        mClient.registerBluetoothStateListener(mBluetoothStateListener);
     }
     private final BluetoothStateListener mBluetoothStateListener = new BluetoothStateListener() {
         @Override
